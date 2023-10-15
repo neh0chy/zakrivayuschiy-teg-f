@@ -17,4 +17,25 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--card-font-weight);
+  color: var(--accent-color);
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+.page-size {}
+
+.header {
+  font-family: var(--accent-font), sans-serif;
+  font-weight: 400;
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 2.2114rem + 4.2553vw, 4.0625rem);
+}
+
+.header__subtitle {}
