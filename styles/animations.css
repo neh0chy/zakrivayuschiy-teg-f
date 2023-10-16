@@ -13,6 +13,8 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+/* ========== header buttons effects ========== */
+
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
@@ -20,7 +22,6 @@
 }
 
 .theme-menu__button:focus {
-  outline: none;
   opacity: 0.6;
 }
 
@@ -38,9 +39,38 @@
   width: 100%;
 }
 
+/* ========== square buttons effects ========== */
+
+.button-effects {
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.button-effects::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--blend-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.button-effects:hover::after {
+  transform: scaleX(1);
+}
+
+.button-effects:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+}
 
 
-  
+
+
+/* ========== animations keyframes ========== */
 
 @keyframes triangle {
   from {
