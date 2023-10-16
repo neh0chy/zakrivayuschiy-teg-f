@@ -44,10 +44,10 @@
 
 @keyframes triangle {
   from {
-    left: 6px;
+    left: 4px;
   }
 
   to {
-    left: 2px;
+    left: 0px;
   }
 }

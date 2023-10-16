@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -62,11 +61,10 @@
 }
 
 .theme-menu__button {
-  padding-inline-start: 23px;
+  padding-inline-start: 20px;
   cursor: pointer;
-  border: none;
   background-color: transparent;
-  font-size: 14px; 
+  font-size: 14px;
   text-transform: inherit;
   position: relative;
   transition: opacity 0.3s ease;
@@ -100,12 +98,33 @@
 }
 
 .card__image-wrapper {
+  position: relative;
   border-block-start: 2px solid var(--accent-color);
   border-block-end: 2px solid var(--accent-color);
 }
 
 .card__image-lable {
   position: absolute;
+  opacity: 0.5;
+  top: 24px;
+  right: 24px;
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-shadow:
+    -1px 0 var(--bg-color),
+    0 1px var(--bg-color),
+    1px 0 var(--bg-color),
+    0 -1px var(--bg-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+  .card__image-lable {
+      -webkit-text-stroke: 1px var(--bg-color);
+      text-stroke: 1px var(--bg-color);
+      text-shadow: none;
+  }
 }
 
 .card__image {
@@ -118,26 +137,137 @@
   margin-block-start: 26px;
   font-size: 18px;
   line-height: 21px;
+  z-index: 100;
+}
+
+.card__paragraph:last-of-type {
+  margin-block-start: 27px;
 }
 
 .card__button-container {
   display: flex;
   justify-content: end;
+  gap: 6px;
   align-items: center;
   margin: 24px;
 }
 
-.card__icon-button {}
-
 .like-icon {
-  margin: 3px 6px 0 0;
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.card__icon-button {
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color);
 }
 
 .card__like-button {
+  position: relative;
   border: 2px solid var(--accent-color);
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
-  padding: 9px 35px;
+  inline-size: 130px;
+  block-size: 38px;
 }
 
-@media (width <= 375px) {}
+.card__like-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card__like-button:hover::after {
+  transform: scaleX(1);
+}
+
+.card__like-button span {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--bg-color);
+}
+
+.card__like-button:focus,
+.button-modal:focus,
+.dialog__button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible,
+.button-modal:focus-visible,
+.dialog__button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+}
+
+.button-modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 54px auto 105px;
+  background-color: var(--bg-color);
+  inline-size: 335px;
+  block-size: 51px;
+  cursor: pointer;
+  border: 2px solid var(--accent-color);
+}
+
+.button-modal .floppy {
+  inline-size: 21px;
+}
+
+.button-modal__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+}
+
+#dialog-id {
+  inline-size: 357px;
+  border: 2px solid var(--accent-color);
+  padding: 31px;
+}
+
+.dialog__wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#dialog-id .floppy {
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.dialog__title {
+  max-inline-size: 200px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  margin-block-start: 30px;
+  inline-size: 100%;
+  padding: 9px 17px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 90%;
+  text-transform: uppercase;
+  border: 2px solid var(--accent-color);
+}
+
+@media (width <=375px) {}
