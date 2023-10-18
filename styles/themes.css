@@ -13,6 +13,9 @@
   --accent-color: #000;
   --bg-color: #FFF;
   --blend-color: #FFF;
+  --heart-contour: #000;
+  --heart-main: red;
+  --heart-core: #fff;
   --bg-gradient: repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }
 
@@ -24,6 +27,9 @@
   --accent-color: #00CC14;
   --bg-color: #000;
   --blend-color: #00CC14;
+  --heart-contour: #000;
+  --heart-main: red;
+  --heart-core: #fff;
   --bg-gradient: repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
 }
 
@@ -36,6 +42,9 @@
     --accent-color: #00CC14;
     --bg-color: #000;
     --blend-color: #00CC14;
+    --heart-contour: #000;
+    --heart-main: red;
+    --heart-core: #fff;
     --bg-gradient: repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
   }
 }
