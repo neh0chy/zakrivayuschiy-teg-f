@@ -132,7 +132,7 @@
 }
 
 .card__paragraph {
-  margin: 0 26px;
+  margin: 0 24px;
   margin-block-start: 26px;
   font-size: 18px;
   font-style: normal;
@@ -279,6 +279,10 @@ dialog::backdrop {
 @media (width <=375px) {
   .card__list {
     gap: 49px;
+  }
+
+  .card__paragraph {
+    margin: 0 26px;
   }
 
   .card__image-lable {
