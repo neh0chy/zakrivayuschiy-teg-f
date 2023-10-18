@@ -82,7 +82,7 @@
 .card__list {
   display: flex;
   flex-direction: column;
-  gap: 51px;
+  gap: 49px;
 }
 
 .card__item {
@@ -132,8 +132,7 @@
 }
 
 .card__paragraph {
-  margin: 0 24px;
-  margin-block-start: 26px;
+  margin: 26px 24px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -174,7 +173,7 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   inline-size: 130px;
-  block-size: 40px;
+  block-size: 38px;
 }
 
 .button-modal {
@@ -182,7 +181,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin: 52px auto 105px;
+  margin: 50px auto 105px;
   padding: 14px 0;
   background-color: var(--bg-color);
   inline-size: 338px;
@@ -278,11 +277,11 @@ dialog::backdrop {
 
 @media (width <=375px) {
   .card__list {
-    gap: 49px;
+    gap: 47px;
   }
 
   .card__paragraph {
-    margin: 0 26px;
+    margin: 26px;
   }
 
   .card__image-lable {
