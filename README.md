@@ -8,6 +8,8 @@
 * наложение фильтров на карточки
 * открытие и закрытие попапа
 
-[Ссылка на репозиторий](https://github.com/neh0chy/slozhno-sosredotochitsya.git)
+Ссылка на репозиторий:
+https://github.com/neh0chy/slozhno-sosredotochitsya.git
 
-[Проект на Github Pages](https://neh0chy.github.io/zakrivayuschiy-teg-f/)
+Проект на Github Pages:
+https://neh0chy.github.io/zakrivayuschiy-teg-f/
