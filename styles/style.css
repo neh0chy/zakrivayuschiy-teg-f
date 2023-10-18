@@ -109,7 +109,7 @@
 .card__list {
   display: flex;
   flex-direction: column;
-  gap: 49px;
+  gap: 50px;
 }
 
 .card__item {
