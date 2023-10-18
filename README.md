@@ -11,5 +11,5 @@
 Ссылка на репозиторий:
 https://github.com/neh0chy/slozhno-sosredotochitsya.git
 
-Проект на Github Pages:
-https://neh0chy.github.io/zakrivayuschiy-teg-f/
+Проект на GitHub Pages:
+https://neh0chy.github.io/zakrivayuschiy-teg-f
